@@ -1,19 +1,19 @@
 body
 {
-	background-color: #404040;
+	/*background-color: #404040;*/
 	font-family: sans-serif;
 }
-
+ 
 #container
 {
-	width: 1000px;
+	width: 1050px;
 	margin-left: auto;
 	margin-right: auto;
 }
 
 #logo
 {
-	color: white;
+	color: #404040;
 	margin-top: 40px;
 	margin-bottom: 40px;
 	font-size: 44px;
@@ -27,7 +27,7 @@ body
 	margin-top: 20px;
 	margin-bottom: 40px;
 	color: #ffffff;
-	padding: 10px;
+	padding: 5px;
 	position: center;
 	text-align: center;
 	
@@ -69,18 +69,40 @@ body
 	background-color: #dedede;
 	min-height: 580px;
 	text-align: justify;
-	width: 920px;
+	width: 970px;
 	margin-top: 20px;
 }
 
 #footer
 {
 	clear: both;
-	color: white;
+	color: #404040;
 	text-align: center;
 	padding: 20px;
-	font-size: 18px;
+	font-size: 19px;
 	
+}
+#zegarek, #data
+{
+	font-size: 25px;
+}
+.test-block
+{
+	width: 200px;
+	border: 2px solid rgba(71, 236, 30, 1);
+	background: rgba(71, 236, 30, 0.7);
+	text-align: center;
+	color: #000;
+	padding: 20px;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 .relacje
 {
@@ -91,12 +113,14 @@ body
 .option
 {
 	float: left;
-	min-width: 50px;
-	height: 25px;
-	font-size: 18px;
+	min-width: 40px;
+	height: 35px;
+	font-size: 19px;
 	padding: 10px;
 	opacity: 0.8;
-	margin-left: 40px;
+	margin-top: 10px;
+	margin-bottom: 5px;
+	margin-left: 30px;
 	margin-right: 5px;
 	text-align: center;
 }	
@@ -133,9 +157,11 @@ body
 .dottedline
 {
 	height: 5px;
+	width: 1050px;
 	margin-top: 15px;
 	margin-bottom: 20px;
 	border-bottom: 2px dotted #444444;
+	margin-left: -20px;
 }
 a:link
 {	color: #ffffff; 

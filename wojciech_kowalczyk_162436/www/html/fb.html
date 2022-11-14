@@ -1,0 +1,61 @@
+<div id="content">
+	<span class="bigtitle">Facebook</span>
+	<div id="fb-root"></div><br><br><br>
+		<script async defer crossorigin="anonymous" src="https://connect.facebook.net/pl_PL/sdk.js#xfbml=1&version=v15.0" nonce="5x2eSGHU"></script>
+	<div class="fb-page" data-href="https://www.facebook.com/cyclingmaniak" data-tabs="facebook" data-width="600" data-height="600" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/cyclingmaniak" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/cyclingmaniak">Cyklomaniak Wojciech Kowalczyk</a></blockquote></div>
+	<br><br><br><br>
+	<form method="POST" name="background">
+		<input type="button" value="żółty" onclick="changeBackground('#FFF000')">
+		<input type="button" value="czarny" onclick="changeBackground('#000000')">
+		<input type="button" value="różowy" onclick="changeBackground('#FFC0CB')">
+		<input type="button" value="zielony" onclick="changeBackground('#00FF00')">
+		<input type="button" value="niebieski" onclick="changeBackground('#0000FF')">
+		<input type="button" value="pomarańczowy" onclick="changeBackground('#FF8000')">
+		<input type="button" value="szary" onclick="changeBackground('#c0c0c0')">
+		<input type="button" value="czerwony" onclick="changeBackground('#FF0000')">
+	</form>
+	<br/>
+	<div id="animacjaTestowa1" class="test-block">Kliknij, a się powiększe</div>
+	<script>
+		$("#animacjaTestowa1").on("click", function()
+			{
+				$(this).animate({
+					width: "500px",
+					opacity: 0.4,
+					fontSize: "3em",
+					borderWidth: "10px"
+				}, 1500);
+			});
+	</script>
+	<br>
+	<div id="animacjaTestowa2" class="test-block">Najedź kursorem, a się powiększe</div>
+	<script>
+		$("#animacjaTestowa2").on({
+			"mouseover" : function() {
+					$(this).animate({
+					width: 300
+					}, 800);
+				},
+			"mouseout" : function() {
+					$(this).animate({
+					width: 200
+					}, 800)
+				}
+			});
+	</script>
+	<br/>
+	<div id="animacjaTestowa3" class="test-block">Kliknij, abym urósł</div>
+	<script>
+		$("#animacjaTestowa3").on("click", function(){
+			if(!$(this).is(":animated")) {
+				$(this).animate({
+					width: "+=" + 50,
+					height: "+=" + 10,
+					opacity: "+=" + 0.1,
+					duration: 3000
+				});
+			}
+		});
+	</script>
+	<div class="dottedline"></div>	
+</div>	
