@@ -1,15 +1,3 @@
-<?php
-	error_reporting(E_ALL ^ E_NOTICE ^ E_WARNING);
-	if($_GET['idp'] == '') $strona = 'html/glowna.html';
-	if($_GET['idp'] == 'trening') $strona = 'html/trening.html';
-	if($_GET['idp'] == 'kontakt') $strona = 'html/kontakt.html';
-	if($_GET['idp'] == 'relacje') $strona = 'html/relacje.html';
-	if($_GET['idp'] == 'galeria') $strona = 'html/galeria.html';
-	if($_GET['idp'] == 'fb') $strona = 'html/fb.html';
-	if($_GET['idp'] == 'filmy') $strona = 'html/filmy.html';
-?>
-
-
 <!DOCTYPE HTML>
 <html lang="pl">
 <head>
@@ -28,14 +16,16 @@
 		</div>
 		<div id="zegarek"></div>
 		<div id="data"></div>
+		
 		<div id="menu">
 			<div class="option"><a href="index.php?idp=">Strona główna</a></div>
 			<div class="option"><a href="index.php?idp=trening">Trening</a></div>
-			<div class="option"><a href="index.php?idp=kontakt">Kontakt</a></div>
+			<div class="option"><a href="contact.php">Kontakt</a></div>
 			<div class="option"><a href="index.php?idp=relacje">Relacje z wyścigów</a></div>
 			<div class="option"><a href="index.php?idp=galeria">Galeria</a></div>
-			<div class="option"><a href="index.php?idp=fb">Facebook</a></div>
+			<div class="option"><a href="index.php?idp=javascript">JavaScript</a></div>
 			<div class="option"><a href="index.php?idp=filmy">Filmy</a></div>
+			<div class="option"><a href="zaloguj.php">Zaloguj się</a></div>
 			<div style="clear:both;"></div>
 		</div> 
 		
@@ -44,20 +34,28 @@
 				<img src="img/logo.png" />
 			</div>
 			<div id="topbarR">
+				
 				<span class="bigtitle">Moje motto</span> <br><br>
+				
 				<h2>"Sukces to suma wysiłku powtarzanego z dnia na dzień..."</h2>
+				
 				<div style="height: 15px;"></div>
 				
 			</div>
 			<div style="clear:both;"></div>
 		</div>
-			<?php 
-				if (file_exists($strona)){
-					include($strona);
-				}
-				else {
-					throw new ErrorException($site . "Plik nie istnieje!");
-				}
+			<?php
+				error_reporting(E_ALL ^ E_NOTICE ^ E_WARNING);
+				include('cfg.php');
+				include('showpage.php');
+				if($_GET['idp'] == '') $strona = 1;
+				if($_GET['idp'] == 'trening') $strona = 2;
+				if($_GET['idp'] == 'kontakt') $strona = 4;
+				if($_GET['idp'] == 'relacje') $strona = 3;
+				if($_GET['idp'] == 'galeria') $strona = 5;
+				if($_GET['idp'] == 'javascript') $strona = 7;
+				if($_GET['idp'] == 'filmy') $strona = 6;
+				echo PokazPodstrone($strona);
 			?>
 		<div id="footer">
 		<div class="dottedline"></div>

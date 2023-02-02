@@ -1,6 +1,6 @@
 body
 {
-	/*background-color: #404040;*/
+	background-color: #c0c0c0;
 	font-family: sans-serif;
 }
  
@@ -115,12 +115,12 @@ body
 	float: left;
 	min-width: 40px;
 	height: 35px;
-	font-size: 19px;
+	font-size: 17px;
 	padding: 10px;
 	opacity: 0.8;
 	margin-top: 10px;
 	margin-bottom: 5px;
-	margin-left: 30px;
+	margin-left: 20px;
 	margin-right: 5px;
 	text-align: center;
 }	
@@ -157,11 +157,11 @@ body
 .dottedline
 {
 	height: 5px;
-	width: 1050px;
+	width: 100%;
 	margin-top: 15px;
 	margin-bottom: 20px;
 	border-bottom: 2px dotted #444444;
-	margin-left: -20px;
+	margin-left: 0%;
 }
 a:link
 {	color: #ffffff; 
